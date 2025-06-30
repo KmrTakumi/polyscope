@@ -166,6 +166,7 @@ struct InnerType {
 // some compilers will throw an error if the name doesn't resolve. 
 inline void adaptorF_custom_size(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 // Highest priority: any user defined function
@@ -252,6 +253,7 @@ size_t adaptorF_size(const T& inputData) {
 // some compilers will throw an error if the name doesn't resolve. 
 inline void adaptorF_custom_convertToStdVector(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 // Highest priority: user-specified function
@@ -380,6 +382,7 @@ void adaptorF_convertToStdVector(const T& inputData, std::vector<S>& dataOut) {
 // some compilers will throw an error if the name doesn't resolve. 
 inline void adaptorF_custom_accessVector2Value(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 // Highest priority: any user defined function
@@ -495,6 +498,7 @@ S adaptorF_accessVector2Value(const T& inVal) {
 // some compilers will throw an error if the name doesn't resolve.
 inline void adaptorF_custom_accessVector3Value(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 // Highest priority: any user defined function
@@ -596,6 +600,7 @@ S adaptorF_accessVector3Value(const T& inVal) {
 // some compilers will throw an error if the name doesn't resolve.
 inline void adaptorF_custom_convertArrayOfVectorToStdVector(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 template <
@@ -861,6 +866,7 @@ std::vector<O> adaptorF_convertArrayOfVectorToStdVector(const T& inputData) {
 // always resolve to something; some compilers will throw an error if the name doesn't resolve.
 inline void adaptorF_custom_convertNestedArrayToStdVector(void* dont_use) {
   // dummy function
+  (void) dont_use; // avoid unused variable warning
 }
 
 // Highest priority: user-specified function

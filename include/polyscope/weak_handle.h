@@ -82,7 +82,7 @@ public:
     targetPtr = dynamic_cast<TargetType*>(this); // sorry, world
     if (!targetPtr) throw std::runtime_error("[Polyscope] bad getWeakHandle() cast");
     return WeakHandle<TargetType>(weakReferrableDummyRef, weakReferableUniqueID, targetPtr);
-  };
+  }
 
   // Get a generic handle to the class (this is general version, which is non-templated does not allow you to get() the
   // actual target type)

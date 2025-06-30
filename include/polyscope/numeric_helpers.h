@@ -20,6 +20,7 @@ bool allComponentsFinite(const T& x) {
 // avoid double-to-float rounding infs from the line above
 template <>
 inline bool allComponentsFinite<double>(const double& x) {
+  (void)x;
   return true;
 }
 
@@ -28,34 +29,42 @@ inline bool allComponentsFinite<double>(const double& x) {
 // https://github.com/nmwsharp/polyscope/issues/323
 template <>
 inline bool allComponentsFinite<uint8_t>(const uint8_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<int8_t>(const int8_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<uint16_t>(const uint16_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<int16_t>(const int16_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<uint32_t>(const uint32_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<int32_t>(const int32_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<uint64_t>(const uint64_t& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<int64_t>(const int64_t& x) {
+  (void)x;
   return true;
 }
 
@@ -74,14 +83,17 @@ inline bool allComponentsFinite<glm::vec4>(const glm::vec4& x) {
 
 template <>
 inline bool allComponentsFinite<glm::uvec2>(const glm::uvec2& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<glm::uvec3>(const glm::uvec3& x) {
+  (void)x;
   return true;
 }
 template <>
 inline bool allComponentsFinite<glm::uvec4>(const glm::uvec4& x) {
+  (void)x;
   return true;
 }
 
