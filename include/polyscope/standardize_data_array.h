@@ -213,6 +213,7 @@ size_t adaptorF_sizeImpl(PreferenceT<1>, const T& inputData) {
 #ifndef POLYSCOPE_NO_STANDARDIZE_FALLTHROUGH
 template <class T, class S>
 size_t adaptorF_sizeImpl(PreferenceT<0>, const T& inputData) {
+  (void) inputData;
   static_assert(WillBeFalseT<T>::value, "could not resolve valid adaptor for size of array-like data");
   return std::vector<S>();
 }
@@ -346,6 +347,8 @@ void adaptorF_convertToStdVectorImpl(PreferenceT<1>, const T& inputData, std::ve
 #ifndef POLYSCOPE_NO_STANDARDIZE_FALLTHROUGH
 template <class T, class S>
 void adaptorF_convertToStdVectorImpl(PreferenceT<0>, const T& inputData, std::vector<S>& dataOut) {
+  (void) inputData;
+  (void) dataOut;
   static_assert(WillBeFalseT<T>::value, "could not resolve valid adaptor for accessing array-like data");
 }
 #endif
@@ -458,6 +461,7 @@ S adaptorF_accessVector2ValueImpl(PreferenceT<1>, const T& inputVec) {
 #ifndef POLYSCOPE_NO_STANDARDIZE_FALLTHROUGH
 template <unsigned int I, class T, class S>
 S adaptorF_accessVector2ValueImpl(PreferenceT<0>, const T& inputVec) {
+  (void) inputVec;
   static_assert(WillBeFalseT<T>::value, "could not resolve valid accessor for 2D vector-like value");
   return S();
 }
@@ -547,6 +551,7 @@ S adaptorF_accessVector3ValueImpl(PreferenceT<1>, const T& inputVec) {
 #ifndef POLYSCOPE_NO_STANDARDIZE_FALLTHROUGH
 template <unsigned int I, class T, class S>
 S adaptorF_accessVector3ValueImpl(PreferenceT<0>, const T& inputVec) {
+  (void) inputVec;
   static_assert(WillBeFalseT<T>::value, "could not resolve valid accessor for 3D vector-like value");
   return S();
 }
@@ -823,6 +828,7 @@ std::vector<O> adaptorF_convertArrayOfVectorToStdVectorImpl(PreferenceT<1>, cons
 #ifndef POLYSCOPE_NO_STANDARDIZE_FALLTHROUGH
 template <class O, unsigned int D, class T>
 std::vector<O> adaptorF_convertArrayOfVectorToStdVectorImpl(PreferenceT<0>, const T& inputData) {
+  (void) inputData;
   static_assert(WillBeFalseT<T>::value,
                 "could not resolve valid adaptor for accessing array-of-vectors-like input data");
   return std::vector<O>();
@@ -1079,6 +1085,7 @@ adaptorF_convertNestedArrayToStdVectorImpl(PreferenceT<1>, const T& inputData) {
 template <class S, class I, class T>
 std::tuple<std::vector<S>, std::vector<I>>
 adaptorF_convertNestedArrayToStdVector(PreferenceT<0>, const T& inputData) {
+  (void) inputData;
   static_assert(WillBeFalseT<T>::value, "could not resolve valid adaptor for accessing nested-array-like input data");
   return std::tuple<std::vector<S>, std::vector<I>>();
 }

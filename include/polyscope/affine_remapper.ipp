@@ -97,7 +97,7 @@ std::pair<typename FIELD_MAG<T>::type, typename FIELD_MAG<T>::type> robustMinMax
 
 template <typename T>
 AffineRemapper<T>::AffineRemapper(T offset_, typename FIELD_MAG<T>::type scale_)
-    : offset(offset_), scale(scale){
+    : offset(offset_), scale(scale_){
 
                        };
 

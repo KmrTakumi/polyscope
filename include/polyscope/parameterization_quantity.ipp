@@ -9,7 +9,7 @@ namespace polyscope {
 
 namespace {
 // Helper to name styles
-std::string styleName(ParamVizStyle v) {
+[[maybe_unused]] std::string styleName(ParamVizStyle v) {
   switch (v) {
   case ParamVizStyle::CHECKER:
     return "checker";

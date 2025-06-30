@@ -15,7 +15,9 @@ template <typename QuantityT>
 void ColorQuantity<QuantityT>::buildColorOptionsUI() {}
 
 template <typename QuantityT>
-void ColorQuantity<QuantityT>::setColorUniforms(render::ShaderProgram& p) {}
+void ColorQuantity<QuantityT>::setColorUniforms(render::ShaderProgram& p) {
+  (void)p;
+}
 
 template <typename QuantityT>
 std::vector<std::string> ColorQuantity<QuantityT>::addColorRules(std::vector<std::string> rules) {
